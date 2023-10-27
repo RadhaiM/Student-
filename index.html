@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)file:///C:/Users/ELCOT/Desktop/student.html/index.html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h2><b><font size="100">Student Registration Form</font></b></h2><br><br>
+    </header>
+<main>
+    <title>Full Name Form</title>
+<br>
+    <h1>Enter Your Full Name:</h1><br><br>
+    <form id="fullNameForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required=""><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required=""><br>
+
+    </form>
+
+    <script>
+        document.getElementById("fullNameForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+
+            alert("Full Name: " + firstName + " " + lastName);
+        });
+    </script>
+</main>
+    
+    <title>Age Entry</title>
+<main>
+    <h1>Enter Your Age:</h1><br><br>
+    <input type="number" id="age" placeholder="Enter your age" required=""><br>
+
+    <script>
+        function submitAge() {
+            var age = document.getElementById('age').value;
+            alert("Age submitted: " + age);
+        }
+    </script>
+    <br><br>
+    <title>Date of Birth Entry</title>
+    <link rel="stylesheet" href="file:///C:/Users/ELCOT/Desktop/student.html/styles.css">
+
+
+    <div class="container">
+        <h1>Enter Your Date of Birth</h1><br><br>
+        <form id="dobForm">
+            <label for="dobDay">Day:</label>
+            <input type="number" id="dobDay" name="dobDay" min="1" max="31" required=""><br>
+
+            <label for="dobMonth">Month:</label>
+            <input type="number" id="dobMonth" name="dobMonth" min="1" max="12" required=""><br>
+
+            <label for="dobYear">Year:</label>
+            <input type="number" id="dobYear" name="dobYear" min="1900" max="2023" required=""><br>
+
+
+        </form>
+
+        <div id="output"></div>
+    </div>
+<br><br>
+    <script src="file:///C:/Users/ELCOT/Desktop/student.html/script.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender Selection</title>
+
+    <h1>Select Your Gender:</h1>
+    
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label><br>
+    <br><br>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email and Password Entry</title>
+
+    <h1>Enter Your Email and Password</h1><br><br>
+    <form id="loginForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required=""><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required=""><br>
+
+    
+    </form>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            alert("Email ID: " + email + "\nPassword: " + password);
+        });
+    </script>
+<br><br>
+    <title>Register Number Form</title>
+
+<h1>Enter your Register Number:</h1><br><br>
+<form>
+    <label for="registerNumber">Register Number:</label><br>
+    <input type="text" id="registerNumber" name="registerNumber" required=""><br><br>
+
+</form>
+<br><br>
+    <title>Department Name Form</title>
+    <style>
+        .department-container {
+        }
+    </style>
+    <script>
+        function displayDepartmentName() {
+            var departmentName = document.getElementById("departmentName").value;
+            document.getElementById("result").innerHTML = "Department Name: " + departmentName;
+           
+
+        }
+    </script>
+
+<div class="department-container">
+    <h1>Enter Department Name</h1><br><br>
+
+    <label for="departmentName">Department Name:</label>
+    <input type="text" id="departmentName" placeholder="Enter department name"><br>
+    <button type="submit">Submit</button>
+   
+    <p id="result"></p>
+</div>
+</main>
+
+<main>
+
+    <title>Parents' Names</title>
+    <script>
+        function displayNames() {
+            var parent1 = document.getElementById("parent1").value;
+            var parent2 = document.getElementById("parent2").value;
+            document.getElementById("result").innerHTML = "Parents' Names: " + parent1 + " and " + parent2;
+        }
+    </script>
+<br><br>
+<h1>Enter Parents' Names</h1><br><br>
+
+<label for="parent1">Parent 1 Name:</label>
+<input type="text" id="parent1" placeholder="Enter parent&#39;s name"><br><br>
+
+<label for="parent2">Parent 2 Name:</label>
+<input type="text" id="parent2" placeholder="Enter parent&#39;s name"><br><br>
+
+<p id="result"></p>
+    <title>Address Form</title>
+    <style>
+        .address-container {
+        }
+    </style>
+    <script>
+        function displayAddress() {
+            var street = document.getElementById("street").value;
+            var city = document.getElementById("city").value;
+            var state = document.getElementById("state").value;
+            var zip = document.getElementById("zip").value;
+
+            var fullAddress = street + ", " + city + ", " + state + " " + zip;
+            document.getElementById("result").innerHTML = "Address: " + fullAddress;
+        }
+    </script>
+
+<div class="address-container">
+    <h1>Enter Address</h1><br><br>
+
+    <label for="street">Street:</label>
+    <input type="text" id="street" placeholder="Enter street"><br><br>
+
+    <label for="city">City:</label>
+    <input type="text" id="city" placeholder="Enter city"><br><br>
+
+    <label for="state">State:</label>
+    <input type="text" id="state" placeholder="Enter state"><br><br>
+
+    <label for="pin">PIN Code:</label>
+    <input type="text" id="pin" placeholder="Enter PIN code"><br><br>
+
+    <p id="result"></p>
+</div>
+    <title>Phone Number Form</title>
+    <style>
+        .phone-container {
+        }
+    </style>
+    <script>
+        function displayPhoneNumber() {
+            var countryCode = document.getElementById("countryCode").value;
+            var areaCode = document.getElementById("areaCode").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+
+            var fullPhoneNumber = "+" + countryCode + " (" + areaCode + ") " + phoneNumber;
+            document.getElementById("result").innerHTML = "Phone Number: " + fullPhoneNumber;
+        }
+    </script>
+
+<div class="phone-container">
+    <h1>Enter Phone Number</h1><br><br>
+
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" id="phoneNumber" placeholder="Enter phone number"><br><br>
+    <button type="submit">Submit</button>
+    <p id="result"></p>
+</div>
+
+<form>
+
+</form>
+    <title>Page 3</title>
+
+    <h2><font size="100">Welcome to the second page</font></h2>
+
+    <title>Update Profile</title>
+<br><br>
+    <h1>Update Your Profile</h1>
+    <br><br>
+
+    <form action="file:///C:/update_profile" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required=""><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required=""><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required=""><br><br>
+
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required=""><br><br>
+        <button type="update">Update</button>
+    </form>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green update Button</title>
+    <form action="file:///C:/update" method="post">
+        <!-- Other form elements go here -->
+
+    </form>
+</main>
+
+</html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>College Sports Registration</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <style>
+        
+    </style>
+    <body>
+        <header>
+            <h2><font size="60"; style="color:rgb(226, 24, 85);"><b>Sports Registration Form</b></font></h2>  
+        </header>
+    <br><br>
+        <main>
+            <form id="registrationForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <br>
+                <label for="department">Department:</label>
+                <input type="text" id="department" required>
+                <br>
+                <label for="year">Year:</label>
+                <select id="year" required>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+               </select>
+               <br>
+               <label for="email">Email:</label>
+               <input type="email" id="email" required>
+               <br>
+               <label for="fatherName">Father's Name:</label>
+               <input type="text" id="fatherName" required>
+               <br>
+               <label for="collegeName">College Name:</label>
+               <input type="text" id="collegeName" required>
+               <br>
+               <label for="sport">Sport:</label>
+               <select id="sport" required>
+                <option value="football">Football</option>
+                <option value="basketball">Basketball</option>
+                <option value="volleyball">Volleyball</option>
+            </select>
+            <br>
+            <button type="submit">Register</button>
+        </form>
+
+    <head>
+        <title>Back Button Example</title>
+    </head>
+    
+    <body>
+        
+        <button onclick="goBack()">Back</button>
+    
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+
+    <script src="script.js"></script>
+</body>
+    </main>
+
+ 
